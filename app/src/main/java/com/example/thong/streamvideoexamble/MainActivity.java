@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.MediaController;
 import android.widget.VideoView;
 
 import org.androidannotations.annotations.AfterViews;
@@ -22,6 +23,9 @@ public class MainActivity extends ActionBarActivity {
         String videoAndress =  "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
         Uri uri = Uri.parse(videoAndress);
         mVideoView.setVideoURI(uri);
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(mVideoView);
+        mVideoView.setMediaController(mediaController);
         mVideoView.start();
     }
 }
