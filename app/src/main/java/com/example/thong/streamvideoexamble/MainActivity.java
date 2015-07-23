@@ -9,5 +9,5 @@ import org.androidannotations.annotations.EActivity;
 
 @EActivity(R.layout.activity_main)
 public class MainActivity extends ActionBarActivity {
-
+    private int numberToTest = 1;
 }
